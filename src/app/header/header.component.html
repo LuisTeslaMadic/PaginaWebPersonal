@@ -1,0 +1,26 @@
+<header class="main-header">
+    <div class="content-wrapper" #NavWrapper>
+        <nav class="main-menu">
+            <a class="main-logo desactivo">
+                <svg width="50" height="100" viewBox="0 0 1322 1129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="1322" height="1129" fill="#212121"/>
+                    <path d="M459.018 537.5C459.018 775.811 1436.15 969 960.407 969C484.665 969 99 775.811 99 537.5C99 299.189 484.665 106 960.407 106C1436.15 106 459.018 299.189 459.018 537.5Z" fill="#EEDEDE"/>
+                    <path d="M947 386L966.308 438.515H1028.79L978.241 470.971L997.55 523.485L947 491.029L896.45 523.485L915.759 470.971L865.209 438.515H927.692L947 386Z" fill="#C4C4C4"/>
+                </svg>    
+            </a>
+            <ul class="main-list" #mainList>
+                <a class="button-active close" (click)="close()">X</a>
+                <li><a href="#Inicio" (click)="close()">Inicio</a></li>
+                <li><a href="#Descripcion" (click)="close()">Descripción</a></li>
+                <li><a (click)="close()">Proyectos</a></li>
+                <li><a class="button-active" (click)="close()" href="assets/files/Mi_CV.pdf">Descargar CV</a></li>
+            </ul>
+        </nav>
+        <div class="content-button">
+            <button class="main-button"><a href="assets/files/Mi_CV.pdf" target="_blank">Descargar Curriculum</a></button>
+            <button class="open-menu" #buttoTogle (click)="Animacion()">
+                <img src="assets/images/menu.svg" alt="" width="40" height="40" border="0">
+            </button>
+        </div>
+    </div>
+</header>

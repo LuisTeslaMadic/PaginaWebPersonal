@@ -1,0 +1,196 @@
+/*Estilos personalizados del banner*/
+
+
+.section-container{
+    display: flex;
+    width: 100%;
+    margin-top: calc(var(--header-height));
+    background:var(--fondo-color);
+    justify-content: center;
+    height:calc(100vh - var(--header-height));
+    overflow: hidden;
+}
+.content-banner{
+    width:95%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    flex-direction: wrap;
+    justify-content: center;
+   
+}
+.container-one > .img-description{
+    width: 100%;
+ }
+ 
+ .container-two > .img-banner{
+    width: 90%;
+ }
+ .container-one {
+    width:50vh;
+ }
+.container-two{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width:50vh;
+}
+
+ /*Botones*/
+.second-button{
+    width:300px;
+    background:transparent;
+    color:var(--text-color);
+    border:3px double #fff;
+    padding: 0.7em 2em 0.7em 2em;
+    border-radius: 10px 5px 10px 5px;
+    font-family:var(--body-font);
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: var(--z-normal);
+    transition: 0.3s ease-in;
+    margin-top: 40px;
+    margin-bottom:5px;
+}
+.section-button{
+    display: none;
+    width:200px;
+    background:transparent;
+    color:var(--text-color);
+    border:3px double #fff;
+    padding: 0.7em 2em 0.7em 2em;
+    border-radius: 10px 5px 10px 5px;
+    font-family:var(--body-font);
+    font-size: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: var(--z-normal);
+    transition: 0.3s ease-in;
+  }
+
+/*Media para celulares de pantalla larga*/
+@media screen and (min-height:812px){
+    .container-one {
+        width:100%;
+     }
+    .container-two{
+        width:100%;
+    }
+}  
+
+@media  screen and (max-width:280px){
+    .second-button{
+        width:200px;
+        font-size: 14px;
+    }
+    .container-one {
+        width:100%;
+     }
+    .container-two{
+        width:100%;
+    }
+}
+
+  /*Responsive para tabletas*/
+@media screen and   (min-width:540px){
+    .container-two{
+        width:40vh;
+        object-fit: contain;
+    }
+    .container-one{
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
+        width:60vh;
+        transition: 0.3s ease-in;
+    }
+    .container-one > .img-description{
+       width: 100%;
+       height: 90% ;
+       object-fit: contain;
+       transition: 0.3s ease-in;
+       
+     }
+     
+     .container-two > .img-banner{
+        height: calc(100% - var(--header-height));
+        width: 100%;
+        object-fit: contain;
+        transition: 0.3s ease-in;
+     }
+}
+  /*Responsive para ordenadores*/
+  @media  screen and (min-width:1025px){
+    .content-banner{
+        width:90%;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .container-one{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+        width: 100%;
+        animation: bounceInLeft; 
+        animation-duration: 2s; 
+    }
+    .container-two{
+        width:100%;
+        animation:bounceInRight; 
+        animation-duration: 2s; 
+    }
+    
+    .second-button{
+        display:none;
+    }
+    .section-button{
+        display:block;
+        padding: 0.7em 1.5em 0.7em 1.5em;
+        font-size: 15px;
+        /* transition: 0.3s ease-in; */
+        margin-left: 30px; 
+    }
+    .container-one > .img-description{
+        width: 100%;
+      }
+      
+      .container-two > .img-banner{
+         width: 100%;
+
+      }
+  }
+
+/*->>Animaciones->>*/
+   .section-button::after{
+    content:"";
+    position:absolute;
+    background:#424242;
+    bottom: 0;
+    top: 0;
+    left:0;
+    right: 100%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+.second-button::after{
+    content:"";
+    position:absolute;
+    background:#424242;
+    bottom: 0;
+    top: 0;
+    left:0;
+    right: 100%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+
+.section-button:hover::after{
+    right:0;
+}
+.second-button:hover::after{
+    right:0;
+}
+
+

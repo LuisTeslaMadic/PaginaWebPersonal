@@ -1,0 +1,30 @@
+<footer class="main-footer">
+    <div class="container-footer">
+        <a href="https://api.whatsapp.com/send?phone=+51954726971"
+            id="enlace_1" target="_blank" class="contacto">
+            <div class="icono"><img src="assets/files/phone-call.png" width="30" height="30"> +51 954 726 971</div>
+        </a>
+        <div class="contacto">
+            <div class="icono"><img src="assets/files/outlook.png" width="30" height="30">
+                <a href="mailto:randi_junior144@hotmail.es" class="button">randi_junior144@hotmail.es</a>
+            </div>
+        </div>
+        <div class="contacto">
+            <div class="icono">
+                <a href="https://www.linkedin.com/in/cristian-luis-segovia-chac%C3%B3n/"
+                 target="_blank" class="button"><img src="assets/files/linkedin(2).png" width="30" height="30"></a>
+            </div>
+        </div>
+        <div class="mensajeria">
+            <input type="text" #Msj_Para_Mi [(ngModel)]="textoMensaje" id="msj_para_mi" placeholder="Escríbeme un mensaje. . .">
+            <a href="https://api.whatsapp.com/send?phone=51954726971&text"
+                #btnMsj target="_blank" id="btn_enviar_msj_para_mi" (click)="detectarMsjParaMi()">
+                <span class="btn_enviar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 37 31.714">
+                        <path id="btn_enviar" d="M0,69.964,37,54.107,0,38.25V50.583l26.429,3.524L0,57.631Z" transform="translate(0 -38.25)" fill="#00af9c"></path>
+                    </svg>
+             </span>
+            </a>
+        </div>
+    </div>
+</footer>
